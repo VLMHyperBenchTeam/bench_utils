@@ -9,6 +9,10 @@ dependencies = [
     "scikit-learn>=1.7.0",
     "scipy>=1.15.3",
 ]
+authors = [
+   {name = "VLMHyperBenchTeam", email = "contact@vlmhyperbench.team"},
+   {name = "Anton Shiryaev", email = "med.phisiker@gmail.com"}
+]
 
 [build-system]
 requires = ["hatchling"]
