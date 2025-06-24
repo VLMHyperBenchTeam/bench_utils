@@ -12,16 +12,10 @@ dependencies = [
     "prompt-handler",
 ]
 authors = [
-   {name = "VLMHyperBenchTeam", email = "contact@vlmhyperbench.team"},
-   {name = "Anton Shiryaev", email = "med.phisiker@gmail.com"}
-]
-authors = [
     {name = "Anton Shiryaev", email = "med.phisiker@gmail.com"}
 ]
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
