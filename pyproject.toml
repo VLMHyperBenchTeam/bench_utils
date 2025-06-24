@@ -15,8 +15,13 @@ authors = [
    {name = "VLMHyperBenchTeam", email = "contact@vlmhyperbench.team"},
    {name = "Anton Shiryaev", email = "med.phisiker@gmail.com"}
 ]
+authors = [
+    {name = "Anton Shiryaev", email = "med.phisiker@gmail.com"}
+]
 
 [build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
@@ -29,3 +34,7 @@ packages = ["bench_utils"]
 [tool.uv.sources]
 model-interface = { workspace = true }
 prompt-handler  = { workspace = true }
+
+[project.urls]
+Repository = "https://github.com/VLMHyperBenchTeam/bench_utils"
+Homepage = "https://github.com/VLMHyperBenchTeam"
