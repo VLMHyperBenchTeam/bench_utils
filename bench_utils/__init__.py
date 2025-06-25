@@ -1,3 +1,3 @@
-from . import metrics, utils, model_utils
+from . import metrics, model_utils, utils
 
 __all__ = ['metrics', 'utils', 'model_utils'] 

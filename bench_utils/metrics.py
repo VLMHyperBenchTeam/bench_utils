@@ -1,5 +1,7 @@
-from typing import List, Dict
+from typing import Dict, List
+
 import pandas as pd  # type: ignore
+from scipy.stats import kendalltau, spearmanr  # type: ignore
 from sklearn.metrics import (  # type: ignore
     accuracy_score,
     classification_report,
@@ -7,7 +9,6 @@ from sklearn.metrics import (  # type: ignore
     precision_score,
     recall_score,
 )
-from scipy.stats import kendalltau, spearmanr  # type: ignore
 
 __all__ = ['calculate_classification_metrics', 'calculate_ordering_metrics', 'kendalltau', 'spearmanr']
 
@@ -53,7 +54,7 @@ def calculate_ordering_metrics(true_order: List[int], predicted_order: List[int]
     pred_ranks = list(range(len(predicted_order)))
 
     kendall, _ = kendalltau(pred_ranks, true_ranks)
-    accuracy = sum(t == p for t, p in zip(true_order, predicted_order)) / len(true_order)
+    accuracy = sum(t == p for t, p in zip(true_order, predicted_order, strict=False)) / len(true_order)
     rho, _ = spearmanr(true_order, predicted_order)
 
     return {
