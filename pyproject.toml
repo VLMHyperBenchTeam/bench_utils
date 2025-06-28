@@ -1,6 +1,6 @@
 [project]
 name = "bench-utils"
-version = "0.1.2.dev3"
+version = "0.1.2"
 description = "Utilities for benchmarking VLM HyperBench models"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -26,8 +26,6 @@ allow-direct-references = true
 packages = ["bench_utils"]
 
 [tool.uv.sources]
-model-interface = { workspace = true }
-prompt-handler  = { workspace = true }
 
 [project.urls]
 Repository = "https://github.com/VLMHyperBenchTeam/bench_utils"
