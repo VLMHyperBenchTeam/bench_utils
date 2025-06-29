@@ -9,6 +9,7 @@ dependencies = [
     "scikit-learn>=1.7.0",
     "scipy>=1.15.3",
     "model-interface",
+    "model-qwen2_5-vl",
     "prompt-handler",
 ]
 authors = [
