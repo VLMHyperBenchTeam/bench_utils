@@ -8,6 +8,32 @@
 uv add bench_utils
 ```
 
+## Установка из репозитория (Git)
+
+*   **Для пользователей с `uv` и `pyproject.toml` (рекомендуемый способ)**:
+    ```bash
+    uv add git+https://github.com/VLMHyperBenchTeam/bench_utils.git@main
+    uv sync
+    ```
+*   **Для пользователей с `pip` или `uv` (прямая установка)**:
+    ```bash
+    pip install git+https://github.com/VLMHyperBenchTeam/bench_utils.git@main
+    # или
+    uv pip install git+https://github.com/VLMHyperBenchTeam/bench_utils.git@main
+    ```
+
+## Установка из локального дистрибутива
+1.  Сборка: `uv build` (создает `.whl` и `.tar.gz` в `dist/`)
+2.  Установка: `uv pip install dist/bench_utils-0.1.3.dev0-py3-none-any.whl`
+    > **Примечание:** `uv add` не поддерживает установку из `.whl` файлов. Для этого всегда используйте `uv pip install`.
+
+## Установка в режиме разработки
+```bash
+uv pip install -e .
+# или для пользователей pip
+pip install -e .
+```
+
 ## Использование
 
 ```python
